@@ -1,3 +1,4 @@
 fun main() {
-    print("olá mundo: desafio2")
+    println("olá mundo: desafio2")
+    println("Teste de atualização no GitHub")
 }
