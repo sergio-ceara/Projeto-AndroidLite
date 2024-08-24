@@ -1,3 +1,5 @@
+package desafio1
+
 // autor: Paulo Sérgio Ferreira de Sousa
 // Objetivo: Desenvolva um programa que receba o nome do livro, o número total de ​páginas e o número de páginas lidas.
 //           O programa deve calcular e retornar a progressão de leitura em ​porcentagem, junto com o nome do livro.
@@ -34,11 +36,11 @@ fun main() {
             }
             leituraPercentual1 = (paginaAtual2 / paginaTotal2) * 100
             leituraPercentual2 = String.format("%.2f", leituraPercentual1)
-            mensagem1 = "Você leu ${paginaAtual1} de ${paginaTotal1} páginas do livro ${livroNome}, referente a ${leituraPercentual2}% "
+            mensagem1 = "Você leu ${paginaAtual1} de ${paginaTotal1} páginas do livro '${livroNome?.trim()}', referente a ${leituraPercentual2}% "
             when {
-                leituraPercentual1 in 1.00..20.00 -> mensagem2 = "O inicio da leitura é como conhecer uma nova amizade. Continue!"
+                leituraPercentual1 in 0.01..20.00 -> mensagem2 = "O inicio da leitura é como começar uma nova amizade. Continue!"
                 leituraPercentual1 in 21.00..40.00 -> mensagem2 = "As próximas páginas guardam surpresas. Você será surpreendido!"
-                leituraPercentual1 in 41.00..60.00 -> mensagem2 = "Você já tem conteúdos para observações e criticas. Anote!"
+                leituraPercentual1 in 41.00..60.00 -> mensagem2 = "Você já tem conteúdos para observações e críticas. Anote!"
                 leituraPercentual1 in 61.00..80.00 -> mensagem2 = "Suas interpretações são importantes. Contribua!"
                 leituraPercentual1 in 81.00..99.00 -> mensagem2 = "Você está chegando a conclusão da leitura. Parabéns!"
                 leituraPercentual1 in 99.01..100.00 -> mensagem2 = "Você concluiu a leitura. Sucesso!"
